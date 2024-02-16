@@ -1,0 +1,117 @@
+.main {
+	&__about {
+		@include setFlex(column);
+		gap: 20px;
+		width: 500px;
+		height: 500px;
+		margin: 0 auto;
+
+		&__subtitle {
+			margin-bottom: 10px;
+			color: $bg-light-blue;
+		}
+
+		&__title {
+			text-align: center;
+			font-size: 32px;
+			font-weight: $font-600;
+			color: white;
+		}
+
+		&__text {
+			text-align: center;
+			color: white;
+		}
+
+		&__btn-box {
+			&-item {
+				padding: 10px 30px;
+				border: none;
+				border-radius: 3px;
+				background-color: $bg-light-blue;
+
+				& a {
+					color: white;
+				}
+
+				&:last-child {
+					margin-left: 5px;
+					border: 1px solid $bg-light-blue;
+					background-color: transparent;
+
+					& a {
+						color: $bg-light-blue;
+					}
+				}
+			}
+		}
+	}
+	.main__items {
+		@include setFlex(row, space-between);
+
+		&__square {
+			@include setFlex(column, space-around, left);
+			width: 380px;
+			height: 300px;
+			padding: 10px 50px 10px 30px;
+			background-color: #fff;
+
+			&--blue {
+				background-color: $bg-light-blue;
+				color: white;
+			}
+
+			&__title {
+				font-weight: $font-600;
+			}
+
+			&__line {
+				width: 50px;
+				border-top: 1px solid red;
+
+				&--white {
+					border-top: 1px solid white;
+				}
+			}
+
+			&__icon {
+				position: relative;
+				width: 50px;
+				height: 50px;
+				border-radius: 10px;
+
+				&--pink {
+					background-color: #f6c9ca;
+				}
+
+				&--green {
+					background-color: #cbf2a8;
+				}
+
+				&--white {
+					background-color: #fff;
+				}
+
+				.far,
+				.fas {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				.fa-meh {
+					color: #eb2f2f;
+				}
+
+				.fa-check-double {
+					color: rgb(118, 166, 118);
+				}
+
+				.fa-credit-card {
+					color: $bg-light-blue;
+				}
+			}
+		}
+	}
+}
